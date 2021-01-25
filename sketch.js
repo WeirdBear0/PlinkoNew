@@ -34,10 +34,7 @@ function setup() {
   for(var j = 7;j<width;j=j+25){
     plinkoArray.push(new Plinko(j,200,10));
   }
-  if(frameCount%60===0){
-    particleArray.push(new Particle(240,20,10));
- 
-  }
+
 
 }
 
@@ -53,6 +50,10 @@ function draw() {
   ground7.display();
   for( var j = 0; j<plinkoArray.length; j++){
     plinkoArray[j].display();
+  }
+    if(frameCount%60===0){
+    particleArray.push(new Particle(240,20,10));
+ 
   }
 
   for(var k = 0; k<particleArray.length; k++){
